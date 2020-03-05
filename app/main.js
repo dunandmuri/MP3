@@ -4,7 +4,7 @@ var gameState = new GameState({state: initialState});
 var cpuBoard = new Board({autoDeploy: true, name: "cpu"});
 var playerBoard = new Board({autoDeploy: SKIPSETUP, name: "player"});
 var cursor = new Cursor();
-
+console.log("TESTING")
 // UI SETUP
 setupUserInterface();
 
