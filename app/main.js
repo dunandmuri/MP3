@@ -21,7 +21,6 @@ var isGrabbing = false;
 // MAIN GAME LOOP
 // Called every time the Leap provides a new frame of data
 Leap.loop({ hand: function(hand) {
-  console.log("TESTING LOOP")
 
   // Clear any highlighting at the beginning of the loop
   unhighlightTiles();
@@ -48,6 +47,8 @@ Leap.loop({ hand: function(hand) {
     // First, determine if grabbing pose or not
     //isGrabbing = false;
     isGrabbing = (hand.grabStrength > .7) ? true : false;
+    console.log("isGrabbing")
+
     // Grabbing, but no selected ship yet. Look for one.
     // TODO: Update grabbedShip/grabbedOffset if the user is hovering over a ship
     if (!grabbedShip && isGrabbing) {
