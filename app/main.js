@@ -51,8 +51,8 @@ Leap.loop({ hand: function(hand) {
     // Grabbing, but no selected ship yet. Look for one.
     // TODO: Update grabbedShip/grabbedOffset if the user is hovering over a ship
     if (!grabbedShip && isGrabbing) {
-        grabbedShip = getIntersectingShipAndOffset(screenPosition)[0];
-        grabbedOffset = getIntersectingShipAndOffset(screenPosition)[1];
+        grabbedShip = getIntersectingShipAndOffset(hand.screenPosition())[0];
+        grabbedOffset = getIntersectingShipAndOffset(hand.screenPosition())[1];
     }
 
     // Has selected a ship and is still holding it
